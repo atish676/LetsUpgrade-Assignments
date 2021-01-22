@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<body>
+    <script>
+        console.log("Answer 1.");
+        console.log(1 + "2" + "2");
+        //prints 122 as 2 is string and other 2 is also a string which gets printed and
+        //1 is an integer which gets printed after concatination. 
+        console.log(1 + +"2" + "2");
+        //prints 32 as here although 2 is string but + infront indicates that it is to be added to some integer which results in 3 and
+        //other 2 is a string which gets printed after concatination.
+        console.log(1 + -"1" + "2");
+        //prints 02 as here although 1 is string but - infront indicates that it is to be subtracted from some integer which results in 0 and
+        //other 2 is a string which gets printed after concatination.
+        console.log(+"1" + "1" + "2");
+        //prints 112 as all are strings and + right infront although indicates to add it to some integer,
+        //but since there's no integer to add it to, it gets added to 0.
+        console.log("A" - "B" + "2");
+        //NaN (Not a Number) exception is occured as we cannot subtract two alphabets from each other,
+        //2 is a string which gets concatinated with it. If it was + instead of -, concatination would've occured thus printing AB2.
+        console.log("A" - "B" + 2);
+        //NaN (Not a Number) exception is occured as we cannot subtract two alphabets from each other,
+        //2 is an integer which cannot be added to NaN so is ignored.
+
+        console.log("Answer 2.");
+        var marks;
+        //Only declared marks variant not initialized so else statement will be printed.
+        //I checked for test cases - 100, 89, 79, 69, 59, 49, 39, 29 and it works perfect!
+        if (marks > 90) {
+            console.log("AA");
+        } else if (marks > 80 && marks <= 90) {
+            console.log("AB");
+        } else if (marks > 70 && marks <= 80) {
+            console.log("BB");
+        } else if (marks > 60 && marks <= 70) {
+            console.log("BC");
+        } else if (marks > 50 && marks <= 60) {
+            console.log("CC");
+        } else if (marks > 40 && marks <= 50) {
+            console.log("CD");
+        } else if (marks > 30 && marks <= 40) {
+            console.log("DD");
+        } else {
+            console.log("FF");
+        }
+    </script>
+</body>
+</head>
+
+</html>
