@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+
+<body>
+    <!--Answer 1.-->
+    <div>
+        <h2>There are 4 methods to access elements in JavaScript:</h2>
+        <dl>
+            <dt>ID</dt>
+            <dd>
+                document.getElementById is the method of accessing elements using the ID attribute by giving them a
+                special
+                ID with which the elements can be identified. This method returns the element with that ID.
+                For eg- <p id="sauce">Where is the Lamb Sauce ?!!</p>
+            </dd>
+            <dt>Class</dt>
+            <dd>
+                document.getElementsByClassName is the method of accessing elements using the class attribute by giving
+                them
+                a special class name with which the elements can be identified. It can also be used to access elements
+                with
+                predefined class names. This method returns a collection, so to access the elements we need to specify
+                the
+                index or use a loop. For eg-
+                <p class="donut">You donut! Who microwaves a salad ?!</p>
+            </dd>
+            <dt>Tag Name</dt>
+            <dd>
+                document.getElementsByTagName is the method of accessing elements using the name of tag of elements we
+                want
+                to access. This also returns a collection, so to access the elements we need to specify the index or use
+                a
+                loop. For eg-
+                <p>Say goodbye to Chef Mike !</p>
+            </dd>
+            <dt>CSS Query Selector</dt>
+            <dd>
+                document.querySelector is the method of accessing elements using any of the above methods. Use . for
+                classes, # for Ids and name of tag for the tag names. It returns the first element that encounters the
+                match. document.querySelectorAll is another method in which all the elements are returned called
+                NodeList and to access the elements we need to specify the index or use a loop. For eg-
+                <p>Hello! My name is Gordon Ramsey and I'm a 5 Star Michelin Chef.</p>
+            </dd>
+        </dl>
+    </div>
+
+    <!--Answer 2.-->
+    <div>
+        <br><br>
+        Enter First Number: <input type="number" id="n1">
+        <br><br>
+        Enter Second Number: <input type="number" id="n2">
+        <br><br>
+        <button onclick="addition()"> Add </button> <input type="number" id="result">
+    </div>
+    <script>
+        //Answer 1.
+        console.log(document.getElementById('sauce'));
+
+        console.log(document.getElementsByClassName('donut')[0]);
+
+        console.log(document.getElementsByTagName('p')[2]);
+
+        console.log(document.querySelector('p'));
+        console.log(document.querySelectorAll('p')[3]);
+
+        //Answer 2.
+        function addition() {
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            document.getElementById('result').value = +n1 + +n2;
+        }
+    </script>
+</body>
+</head>
+
+</html>
